@@ -63,26 +63,26 @@ const Navbar = ({ currentSection, onSectionClick }) => {
       <div className="navbar-content">
         <div className="navbar-menu">
           <button
-            className={`navbar-item ${currentSection === 3 ? 'active' : ''}`}
-              onClick={() => handleNavigate(3)}
+            className={`navbar-item`}
+              // onClick={() => handleNavigate(3)}
           >
             Services
           </button>
           <button
-            className={`navbar-item ${currentSection === 2 ? 'active' : ''}`}
-              onClick={() => handleNavigate(2)}
+            className={`navbar-item`}
+              // onClick={() => handleNavigate(2)}
           >
             Their Stories
           </button>
           <button
-            className={`navbar-item ${currentSection === 1 ? 'active' : ''}`}
-              onClick={() => handleNavigate(1)}
+            className={`navbar-item`}
+              // onClick={() => handleNavigate(1)}
           >
             Our Story
           </button>
           <button
-            className={`navbar-item ${currentSection === 4 ? 'active' : ''}`}
-              onClick={() => handleNavigate(4)}
+            className={`navbar-item`}
+              // onClick={() => handleNavigate(4)}
           >
             Varnan
           </button>

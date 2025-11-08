@@ -83,18 +83,22 @@
 }
 
 .navbar-content {
+  /* border: 2px red solid; */
   max-width: 1400px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 0 60px;
   display: flex;
+  gap: 40px;
   justify-content: flex-end;
   align-items: center;
   min-height: 100px;
 }
 
 .navbar-menu {
+  /* border: 2px blue solid; */
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 40px;
   background: transparent;
   border-radius: 999px;

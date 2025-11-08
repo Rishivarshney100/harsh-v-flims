@@ -31,6 +31,8 @@
   right: 0;
   bottom: 0;
   background-image: url('./assets/BG.svg');
+  height: 120vh;
+  width: 120vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
