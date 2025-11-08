@@ -38,6 +38,36 @@ const Services = ({ onNavigate }) => {
     }
   };
 
+  // Sync Vector 5 width with title width
+  useEffect(() => {
+    const syncWidths = () => {
+      const title = document.querySelector('.services-title');
+      const vector5 = document.querySelector('.vector-5');
+      
+      if (title && vector5) {
+        const titleWidth = title.offsetWidth;
+        vector5.style.width = `${titleWidth}px`;
+      }
+    };
+
+    // Sync on mount and when page changes
+    // Use multiple timeouts to handle page transitions and animations
+    syncWidths();
+    const timeout1 = setTimeout(syncWidths, 100);
+    const timeout2 = setTimeout(syncWidths, 500); // After zoom animation
+    const timeout3 = setTimeout(syncWidths, 800); // Final check
+    
+    // Also sync on window resize
+    window.addEventListener('resize', syncWidths);
+
+    return () => {
+      window.removeEventListener('resize', syncWidths);
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+      clearTimeout(timeout3);
+    };
+  }, [currentPage, isZooming]);
+
   // Reset to main Services page when component becomes visible
   useEffect(() => {
     const currentSection = sectionRef.current; // Copy ref to variable
@@ -319,7 +349,6 @@ const Services = ({ onNavigate }) => {
           <div className="services-logo">
             <img src={logo} alt="V Films" />
           </div>
-          
           {/* Title Text */}
           <p className="services-title">
             The storyboard reveals the breadth of our craft.
@@ -327,6 +356,7 @@ const Services = ({ onNavigate }) => {
           
           {/* Vector 5 */}
           <img src={vector5} alt="" className="vector-5" />
+          
           
           {/* Tape 1 */}
           <img src={tape} alt="" className="tape tape-1" />

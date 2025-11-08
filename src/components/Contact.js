@@ -180,86 +180,98 @@ const Contact = () => {
           <div className="contact-logo">
             <img src={logo} alt="V Films" />
           </div>
-          {/* Contact Text */}
-          <p className="contact-text">
-            Whether you have an idea, a question, or simply want<br />
-            to explore how V can work together, V're just a<br />
-            message away.<br />
-            Let's catch up over coffee.<br />
-            Great stories always begin with a good conversation
-          </p>
-          {/* Title */}
-          <h2 className="contact-title">Join the Story</h2>
-          {/* Subtitle */}
-          <p className="contact-subtitle">Ready to bring your vision to life? Let's talk.</p>
-          {/* Contact Form */}
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <input 
-              type="text" 
-              name="name"
-              placeholder="Your name*" 
-              className={`form-input ${errors.name ? 'error' : ''}`}
-              value={formData.name}
-              onChange={handleChange}
-            />
-            {errors.name && <span className="error-message">{errors.name}</span>}
-            
-            <input 
-              type="email" 
-              name="email"
-              placeholder="Your email*" 
-              className={`form-input ${errors.email ? 'error' : ''}`}
-              value={formData.email}
-              onChange={handleChange}
-            />
-            {errors.email && <span className="error-message">{errors.email}</span>}
-            
-            <input 
-              type="tel" 
-              name="phone"
-              placeholder="Phone*" 
-              className={`form-input ${errors.phone ? 'error' : ''}`}
-              value={formData.phone}
-              onChange={handleChange}
-            />
-            {errors.phone && <span className="error-message">{errors.phone}</span>}
-            
-            <textarea 
-              name="message"
-              placeholder="Your message*" 
-              className={`form-textarea ${errors.message ? 'error' : ''}`}
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-            ></textarea>
-            {errors.message && <span className="error-message">{errors.message}</span>}
-          </form>
-          
-          {/* Alert Message at Top Center */}
-          {submitStatus === 'success' && (
-            <div className="alert-message success-alert">
-              Form Submitted Successfully!
+          <div className="contact-content-wrapper">
+            <div className="contact-left-section">
+              <p className="contact-text">
+                Whether you have an idea, a question, or simply want<br />
+                to explore how V can work together, V're just a<br />
+                message away.<br />
+                Let's catch up over coffee.<br />
+                Great stories always begin with a good conversation
+              </p>
             </div>
-          )}
-          {submitStatus === 'error' && (
-            <div className="alert-message error-alert">
-              Submission failed. Please try again.
+            
+            {/* Right Section - Form */}
+            <div className="contact-right-section">
+              {/* Title */}
+              <h2 className="contact-title">Join the Story</h2>
+              {/* Subtitle */}
+              <p className="contact-subtitle">Ready to bring your vision to life? Let's talk.</p>
+              {/* Contact Form */}
+              <form className="contact-form" onSubmit={handleSubmit}>
+                <input 
+                  type="text" 
+                  name="name"
+                  placeholder="Your name*" 
+                  className={`form-input ${errors.name ? 'error' : ''}`}
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                {errors.name && <span className="error-message">{errors.name}</span>}
+                
+                <input 
+                  type="email" 
+                  name="email"
+                  placeholder="Your email*" 
+                  className={`form-input ${errors.email ? 'error' : ''}`}
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {errors.email && <span className="error-message">{errors.email}</span>}
+                
+                <input 
+                  type="tel" 
+                  name="phone"
+                  placeholder="Phone*" 
+                  className={`form-input ${errors.phone ? 'error' : ''}`}
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+                {errors.phone && <span className="error-message">{errors.phone}</span>}
+                
+                <textarea 
+                  name="message"
+                  placeholder="Your message*" 
+                  className={`form-textarea ${errors.message ? 'error' : ''}`}
+                  rows="5"
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
+                {errors.message && <span className="error-message">{errors.message}</span>}
+              </form>
+              
+              {/* Alert Message at Top Center */}
+              {submitStatus === 'success' && (
+                <div className="alert-message success-alert">
+                  Form Submitted Successfully!
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="alert-message error-alert">
+                  Submission failed. Please try again.
+                </div>
+              )}
+              
+              {/* Submit Button with Loading */}
+              <div className="submit-button-container">
+                <button type="submit" className="submit-button" onClick={handleSubmit} disabled={isLoading}>
+                  Submit
+                </button>
+                {isLoading && <div className="loading-spinner"></div>}
+              </div>
+              
+              {/* Contact Info */}
+              <div className="contact-info-container">
+                {/* Email */}
+                <p className="contact-email">vernita@varnanfilms.co.in</p>
+                {/* Vertical Divider */}
+                <div className="contact-divider"></div>
+                {/* Phone */}
+                <p className="contact-phone">+91 98736 84567</p>
+              </div>
             </div>
-          )}
-          
-          {/* Submit Button with Loading */}
-          <div className="submit-button-container">
-            <button type="submit" className="submit-button" onClick={handleSubmit} disabled={isLoading}>
-              Submit
-            </button>
-            {isLoading && <div className="loading-spinner"></div>}
           </div>
-          {/* Email */}
-          <p className="contact-email">vernita@varnanfilms.co.in</p>
-          {/* Vertical Divider */}
-          <div className="contact-divider"></div>
-          {/* Phone */}
-          <p className="contact-phone">+91 98736 84567</p>
+          {/* Left Section - Descriptive Text */}
           {/* Footer Vector 2 */}
           <img src={footerVector2} alt="" className="footer-vector-2" />
           {/* Footer Vector 3 */}

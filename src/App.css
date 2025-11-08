@@ -30,10 +30,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(240, 200, 180, 0.1) 2px, rgba(240, 200, 180, 0.1) 4px),
-    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(240, 200, 180, 0.1) 2px, rgba(240, 200, 180, 0.1) 4px);
-  background-size: 40px 40px;
+  background-image: url('./assets/BG.svg');
+  height: 120vh;
+  width: 120vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   pointer-events: none;
   z-index: 0;
 }
