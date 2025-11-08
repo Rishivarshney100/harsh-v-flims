@@ -260,8 +260,7 @@
   position: absolute;
   top: 48.18vw; /* 925px / 1920px */
   left: 63.18vw; /* 1213px / 1920px */
-  width: 7.08vw; /* 136px / 1920px */
-  height: 2.29vw; /* 44px / 1920px */
+  padding: 16px;
   font-family: 'Poppins', sans-serif;
   background: #F05D2B;
   border: none;

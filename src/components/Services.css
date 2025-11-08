@@ -44,8 +44,9 @@
 .services-title {
   position: absolute;
   top: 6.5vw; /* Moved down */
-  left: 20vw; /* Adjusted for wider text */
-  width: 60vw; /* Wider to fit text on one line */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  width: auto; /* Auto width to fit content */
   height: auto;
   font-family: 'Halant', serif;
   font-size: 2vw; /* Increased size */
@@ -56,6 +57,7 @@
   text-align: center;
   color: #2C2C2C;
   opacity: 1;
+  /* border: 1px solid red; */
   white-space: nowrap; /* Force single line */
 }
 
@@ -65,8 +67,8 @@
   top: 9vw; /* Moved down to maintain gap */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center offset */
-  width: 120vw; /* Extra long */
-  height: 1.8vw; /* Slightly bigger */
+  /* width will be set dynamically via JavaScript to match title width */
+  /* height: 100%; */
   opacity: 1;
 }
 

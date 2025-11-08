@@ -180,20 +180,25 @@ const Contact = () => {
           <div className="contact-logo">
             <img src={logo} alt="V Films" />
           </div>
-          {/* Contact Text */}
-          <p className="contact-text">
-            Whether you have an idea, a question, or simply want<br />
-            to explore how V can work together, V're just a<br />
-            message away.<br />
-            Let's catch up over coffee.<br />
-            Great stories always begin with a good conversation
-          </p>
-          {/* Title */}
-          <h2 className="contact-title">Join the Story</h2>
-          {/* Subtitle */}
-          <p className="contact-subtitle">Ready to bring your vision to life? Let's talk.</p>
-          {/* Contact Form */}
-          <form className="contact-form" onSubmit={handleSubmit}>
+          {/* Left Section - Descriptive Text */}
+          <div className="contact-left-section">
+            <p className="contact-text">
+              Whether you have an idea, a question, or simply want<br />
+              to explore how V can work together, V're just a<br />
+              message away.<br />
+              Let's catch up over coffee.<br />
+              Great stories always begin with a good conversation
+            </p>
+          </div>
+          
+          {/* Right Section - Form */}
+          <div className="contact-right-section">
+            {/* Title */}
+            <h2 className="contact-title">Join the Story</h2>
+            {/* Subtitle */}
+            <p className="contact-subtitle">Ready to bring your vision to life? Let's talk.</p>
+            {/* Contact Form */}
+            <form className="contact-form" onSubmit={handleSubmit}>
             <input 
               type="text" 
               name="name"
@@ -232,34 +237,39 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
             ></textarea>
-            {errors.message && <span className="error-message">{errors.message}</span>}
-          </form>
-          
-          {/* Alert Message at Top Center */}
-          {submitStatus === 'success' && (
-            <div className="alert-message success-alert">
-              Form Submitted Successfully!
+              {errors.message && <span className="error-message">{errors.message}</span>}
+            </form>
+            
+            {/* Alert Message at Top Center */}
+            {submitStatus === 'success' && (
+              <div className="alert-message success-alert">
+                Form Submitted Successfully!
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="alert-message error-alert">
+                Submission failed. Please try again.
+              </div>
+            )}
+            
+            {/* Submit Button with Loading */}
+            <div className="submit-button-container">
+              <button type="submit" className="submit-button" onClick={handleSubmit} disabled={isLoading}>
+                Submit
+              </button>
+              {isLoading && <div className="loading-spinner"></div>}
             </div>
-          )}
-          {submitStatus === 'error' && (
-            <div className="alert-message error-alert">
-              Submission failed. Please try again.
+            
+            {/* Contact Info */}
+            <div className="contact-info-container">
+              {/* Email */}
+              <p className="contact-email">vernita@varnanfilms.co.in</p>
+              {/* Vertical Divider */}
+              <div className="contact-divider"></div>
+              {/* Phone */}
+              <p className="contact-phone">+91 98736 84567</p>
             </div>
-          )}
-          
-          {/* Submit Button with Loading */}
-          <div className="submit-button-container">
-            <button type="submit" className="submit-button" onClick={handleSubmit} disabled={isLoading}>
-              Submit
-            </button>
-            {isLoading && <div className="loading-spinner"></div>}
           </div>
-          {/* Email */}
-          <p className="contact-email">vernita@varnanfilms.co.in</p>
-          {/* Vertical Divider */}
-          <div className="contact-divider"></div>
-          {/* Phone */}
-          <p className="contact-phone">+91 98736 84567</p>
           {/* Footer Vector 2 */}
           <img src={footerVector2} alt="" className="footer-vector-2" />
           {/* Footer Vector 3 */}

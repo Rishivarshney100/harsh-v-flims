@@ -205,5 +205,9 @@
   object-fit: contain;
   z-index: 5;
   pointer-events: none;
+
+}
+.imageContainer{
+  border: 2px red solid;
 }
 
