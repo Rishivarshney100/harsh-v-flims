@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Instrument+Sans:wght@400;500;600;700&family=Island+Moments&family=Halant:wght@400&display=swap');
+
+.hero-section {
+  background: linear-gradient(135deg, #FBF5F0 0%, #F5E8DC 100%);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  height: 100vh;
+  padding-top: 80px;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 500px;
+}
+
+.mandala-background {
+  position: absolute;
+  width: 565px;
+  height: 565px;
+  background-image: url('../assets/mandala/hero-mandala.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: 0;
+  animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo-container {
+  position: relative;
+  z-index: 2;
+}
+
+.v-films-logo {
+  width: 388px;
+  height: 150px;
+  opacity: 1;
+  transform: rotate(0deg);
+  object-fit: contain;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-right: 60px;
+}
+
+.hero-tagline {
+  font-family: 'Island Moments', cursive;
+  font-size: 70px;
+  font-weight: 400;
+  font-style: normal;
+  color: #1A3B5C;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-categories {
+  font-family: 'Halant', serif;
+  font-size: 40px;
+  color: #F05D2B;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-description-box {
+  max-width: 487px;
+  width: 487px;
+}
+
+.hero-description-box p {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #252729;
+  margin: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .hero-container {
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 100px;
+    justify-content: flex-start;
+  }
+  
+  .mandala-background {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .v-films-logo {
+    width: 200px;
+    height: 77px;
+  }
+  
+  .hero-right {
+    padding-right: 0;
+  }
+  
+  .hero-tagline {
+    font-size: 28px;
+  }
+  
+  .hero-categories {
+    font-size: 18px;
+  }
+  
+  .hero-description-box {
+    padding: 20px;
+  }
+  
+  .hero-description-box p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  .hero-container {
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 100px;
+  }
+  
+  .mandala-background {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .v-films-logo {
+    width: 250px;
+    height: 96px;
+  }
+  
+  .hero-tagline {
+    font-size: 32px;
+  }
+  
+  .hero-categories {
+    font-size: 20px;
+  }
+  
+  .hero-description-box p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1080px) {
+  .hero-container {
+    gap: 50px;
+  }
+  
+  .mandala-background {
+    width: 500px;
+    height: 500px;
+  }
+  
+  .v-films-logo {
+    width: 310px;
+    height: 120px;
+  }
+  
+  .hero-tagline {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 2732px) and (max-height: 2048px) {
+  .mandala-background {
+    width: 800px;
+    height: 800px;
+  }
+  
+  .v-films-logo {
+    width: 500px;
+    height: 193px;
+  }
+  
+  .hero-tagline {
+    font-size: 64px;
+  }
+  
+  .hero-categories {
+    font-size: 36px;
+  }
+  
+  .hero-description-box {
+    padding: 35px 40px;
+  }
+  
+  .hero-description-box p {
+    font-size: 22px;
+  }
+}
+

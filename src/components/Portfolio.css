@@ -1,0 +1,209 @@
+.portfolio-section {
+  background: #FAF0E6;
+  position: relative;
+  overflow: visible !important;
+}
+
+.portfolio-section .section-content {
+  max-width: none;
+  padding: 0;
+  width: 100%;
+}
+
+.portfolio-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+}
+
+/* Logo */
+.portfolio-logo {
+  position: absolute;
+  top: 1.04vw; /* 20px / 1920px */
+  left: 1.04vw; /* 20px / 1920px */
+  display: flex;
+  justify-content: flex-start;
+  padding: 1.04vw; /* 20px / 1920px */
+  opacity: 1;
+  transform: rotate(0deg);
+  z-index: 10;
+}
+
+.portfolio-logo img {
+  width: 5.2vw; /* 100px / 1920px */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Title Text */
+.portfolio-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18.96vw; /* 364px / 1920px */
+  height: 3.28vw; /* 63px / 1920px */
+  opacity: 1;
+  font-family: 'Halant', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.08vw; /* 40px / 1920px */
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2C2C2C;
+  margin: 0;
+}
+
+/* Subtitle Text */
+.portfolio-subtitle {
+  position: absolute;
+  top: calc(15% + 5vw);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18.96vw; /* 364px / 1920px */
+  height: 1.51vw; /* 29px / 1920px */
+  opacity: 1;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25vw; /* 24px / 1920px */
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2C2C2C;
+  margin: 0;
+}
+
+/* Cam Group */
+.cam-group {
+  position: absolute;
+  top: 12.5vw; /* 240px / 1920px */
+  left: 6.25vw; /* 120px / 1920px */
+  width: 11.67vw; /* 224px / 1920px */
+  height: 26.55vw; /* 509.69px / 1920px */
+  opacity: 1;
+  transform: rotate(0deg);
+  object-fit: contain;
+}
+
+/* Rectangle 45 - Left */
+.rectangle-45-left {
+  position: absolute;
+  top: 360px;
+  left: 538px;
+  width: 70px;
+  height: 283px;
+  opacity: 1;
+  transform: rotate(0deg);
+  border-radius: 4px;
+  object-fit: cover;
+  z-index: 11;
+}
+
+/* Rectangle 45 - Right */
+.rectangle-45-right {
+  position: absolute;
+  top: 360px;
+  left: 1121px;
+  width: 70px;
+  height: 283px;
+  opacity: 1;
+  transform: rotate(0deg);
+  border-radius: 4px;
+  object-fit: cover;
+  z-index: 11;
+}
+
+/* YT Image */
+.yt-image {
+  position: absolute;
+  top: 284px;
+  left: 469px;
+  width: 981px;
+  height: 603px;
+  opacity: 1;
+  transform: rotate(0deg);
+  object-fit: cover;
+  z-index: 3;
+}
+
+/* Group 11 */
+.group-11 {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 681px;
+  height: 603px;
+  opacity: 1;
+  z-index: 10;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+/* Vector 9 - Right */
+.vector-9 {
+  position: absolute;
+  top: 440px;
+  left: 1135px;
+  width: 39.74px;
+  height: 129.84px;
+  opacity: 1;
+  transform: rotate(0deg);
+  object-fit: contain;
+  z-index: 12;
+}
+
+/* Vector 10 - Left */
+.vector-10 {
+  position: absolute;
+  top: 440px;
+  left: 553px;
+  width: 39.74px;
+  height: 129.84px;
+  opacity: 1;
+  transform: rotate(0deg);
+  object-fit: contain;
+  z-index: 12;
+}
+
+/* Button Play */
+.button-play {
+  position: absolute;
+  top: 168.3px;
+  left: 302.23px;
+  width: 98.33px;
+  height: 69.41px;
+  opacity: 1;
+  transform: rotate(0deg);
+  object-fit: contain;
+  z-index: 6;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button-play:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Vector */
+.footer-vector {
+  position: absolute;
+  top: 465px;
+  left: 1335px;
+  width: 500px;
+  height: 500px;
+  opacity: 1;
+  transform: rotate(0deg);
+  object-fit: contain;
+  z-index: 5;
+  pointer-events: none;
+}
+
