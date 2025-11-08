@@ -56,9 +56,9 @@ const ScrollControl = ({ onNavigate, currentSection, totalSections }) => {
   }, [handleDragEnd, handleDragMove, isDragging]);
 
   // Calculate the position of the scroll indicator
-  // Indicator is 200px wide, moves along the full width of the screen minus 20px (10px padding on each side)
+  // Indicator is 200px wide, moves along the full width of the screen minus 120px (60px padding on each side)
   const indicatorWidth = 200;
-  const trackWidth = typeof window !== 'undefined' ? window.innerWidth - 20 : 1920; // -20px for left and right padding
+  const trackWidth = typeof window !== 'undefined' ? window.innerWidth - 120 : 1920; // -120px for left and right padding
   const leftPosition = (currentSection / (totalSections - 1)) * (trackWidth - indicatorWidth);
 
   return (

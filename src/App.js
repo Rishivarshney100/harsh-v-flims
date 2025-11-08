@@ -53,9 +53,9 @@ function App() {
       />
       <div className="horizontal-scroll-container" ref={containerRef}>
         <Hero />
-        <About_team /> {/* eslint-disable-line react/jsx-pascal-case */}
+        <About_team onNavigate={handleNavigation} /> {/* eslint-disable-line react/jsx-pascal-case */}
         <About_us /> {/* eslint-disable-line react/jsx-pascal-case */}
-        <Services />
+        <Services onNavigate={handleNavigation} />
         <Portfolio />
         <Contact />
       </div>

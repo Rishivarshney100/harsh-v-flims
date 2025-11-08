@@ -8,7 +8,14 @@ import arrow2 from '../assets/arrow_2.svg';
 import arrow3 from '../assets/arrow_3.svg';
 import teamSvg from '../assets/team.svg';
 
-const About_team = () => {
+const About_team = ({ onNavigate }) => {
+  const handleViewPortfolio = () => {
+    // Navigate to Portfolio page (section index 4)
+    if (onNavigate) {
+      onNavigate(4);
+    }
+  };
+
   return (
     <div className="section about-section">
       <div className="section-content">
@@ -55,7 +62,7 @@ const About_team = () => {
           </p>
           
           {/* View Portfolio Button */}
-          <button className="view-portfolio-btn">View Portfolio</button>
+          <button className="view-portfolio-btn" onClick={handleViewPortfolio}>View Portfolio</button>
         </div>
       </div>
     </div>

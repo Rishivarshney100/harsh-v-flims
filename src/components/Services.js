@@ -26,10 +26,17 @@ import artCurationIcon2 from '../assets/Art Curation Icons 02.svg';
 import artCurationIcon3 from '../assets/Art Curation Icons 03.svg';
 import artCurationIcon4 from '../assets/Art Curation Icons 04.svg';
 
-const Services = () => {
+const Services = ({ onNavigate }) => {
   const [isZooming, setIsZooming] = useState(false);
   const [currentPage, setCurrentPage] = useState('main'); // 'main', 'film-production', 'branding', 'art-curation'
   const sectionRef = useRef(null);
+
+  const handleExploreClick = () => {
+    // Navigate to Portfolio page (section index 4)
+    if (onNavigate) {
+      onNavigate(4);
+    }
+  };
 
   // Reset to main Services page when component becomes visible
   useEffect(() => {
@@ -145,7 +152,7 @@ const Services = () => {
             </div>
             
             {/* Explore Now Text */}
-            <p className="explore-now-text">Explore Now</p>
+            <p className="explore-now-text" onClick={handleExploreClick}>Explore Now</p>
             
             {/* Film Production page - empty */}
             <img 
@@ -155,7 +162,7 @@ const Services = () => {
               onClick={handleBackClick}
             />
             {/* Arrow */}
-            <img src={arrow} alt="" className="subpage-arrow" />
+            <img src={arrow} alt="" className="subpage-arrow" onClick={handleExploreClick} />
           </div>
         </div>
       </div>
@@ -217,7 +224,7 @@ const Services = () => {
             </div>
             
             {/* Explore Now Text */}
-            <p className="explore-now-text">Explore Now</p>
+            <p className="explore-now-text" onClick={handleExploreClick}>Explore Now</p>
             
             {/* Branding page - empty */}
             <img 
@@ -227,7 +234,7 @@ const Services = () => {
               onClick={handleBackClick}
             />
             {/* Arrow */}
-            <img src={arrow} alt="" className="subpage-arrow" />
+            <img src={arrow} alt="" className="subpage-arrow" onClick={handleExploreClick} />
           </div>
         </div>
       </div>
@@ -287,7 +294,7 @@ const Services = () => {
             </div>
             
             {/* Explore Now Text */}
-            <p className="explore-now-text">Explore Now</p>
+            <p className="explore-now-text" onClick={handleExploreClick}>Explore Now</p>
             
             {/* Art Curation page - empty */}
             <img 
@@ -297,7 +304,7 @@ const Services = () => {
               onClick={handleBackClick}
             />
             {/* Arrow */}
-            <img src={arrow} alt="" className="subpage-arrow" />
+            <img src={arrow} alt="" className="subpage-arrow" onClick={handleExploreClick} />
           </div>
         </div>
       </div>

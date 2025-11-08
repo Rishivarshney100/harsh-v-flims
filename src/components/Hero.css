@@ -24,24 +24,14 @@
 
 .mandala-background {
   position: absolute;
-  width: 565px;
-  height: 565px;
-  background-image: url('../assets/mandala/hero-mandala.svg');
-  background-size: contain;
+  width: 500px;
+  height: 500px;
+  background-image: url('../assets/mandala/hero-mandala.png');
+  background-size: 500px 500px;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 1;
   z-index: 0;
-  animation: rotate 60s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .logo-container {
@@ -50,8 +40,8 @@
 }
 
 .v-films-logo {
-  width: 388px;
-  height: 150px;
+  width: 300px;
+  height: 116px;
   opacity: 1;
   transform: rotate(0deg);
   object-fit: contain;

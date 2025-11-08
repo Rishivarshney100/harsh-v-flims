@@ -1,9 +1,9 @@
 .scroll-control {
   position: fixed;
   bottom: 50px;
-  left: 10px;
-  right: 10px;
-  width: calc(100vw - 20px);
+  left: 60px;
+  right: 60px;
+  width: calc(100vw - 120px);
   z-index: 1000;
 }
 
@@ -25,7 +25,7 @@
   background: rgba(253, 208, 193, 1);
   border-radius: 6px;
   cursor: grab;
-  transition: left 0.3s ease-out;
+  transition: left 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .scroll-indicator:active {
@@ -40,9 +40,9 @@
 @media screen and (max-width: 480px) {
   .scroll-control {
     bottom: 30px;
-    left: 10px;
-    right: 10px;
-    width: calc(100vw - 20px);
+    left: 20px;
+    right: 20px;
+    width: calc(100vw - 40px);
   }
   
   .scroll-track {
@@ -59,9 +59,9 @@
 @media screen and (min-width: 481px) and (max-width: 720px) {
   .scroll-control {
     bottom: 35px;
-    left: 10px;
-    right: 10px;
-    width: calc(100vw - 20px);
+    left: 30px;
+    right: 30px;
+    width: calc(100vw - 60px);
   }
   
   .scroll-track {
@@ -78,9 +78,9 @@
 @media screen and (min-width: 2732px) and (max-height: 2048px) {
   .scroll-control {
     bottom: 70px;
-    left: 10px;
-    right: 10px;
-    width: calc(100vw - 20px);
+    left: 80px;
+    right: 80px;
+    width: calc(100vw - 160px);
   }
   
   .scroll-track {

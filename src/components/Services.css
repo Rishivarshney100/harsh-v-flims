@@ -262,6 +262,12 @@
   transform: rotate(0deg);
   border-width: 0.83vw; /* 16px / 1920px */
   object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.subpage-arrow:hover {
+  transform: translateY(-2px);
 }
 
 /* Subpage Photo */
@@ -455,5 +461,11 @@
   line-height: 100%;
   letter-spacing: 0%;
   color: #2C2C2C;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.explore-now-text:hover {
+  transform: translateY(-2px);
 }
 
