@@ -25,6 +25,31 @@ function App() {
     }
   }, [currentSection]);
 
+  // Prevent vertical scrolling
+  useEffect(() => {
+    const preventVerticalScroll = (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+      }
+    };
+
+    const preventTouchScroll = (e) => {
+      if (e.touches.length === 1) {
+        e.preventDefault();
+      }
+    };
+
+    // Prevent wheel scroll in vertical direction
+    window.addEventListener('wheel', preventVerticalScroll, { passive: false });
+    // Prevent touch scroll
+    document.addEventListener('touchmove', preventTouchScroll, { passive: false });
+
+    return () => {
+      window.removeEventListener('wheel', preventVerticalScroll);
+      document.removeEventListener('touchmove', preventTouchScroll);
+    };
+  }, []);
+
   const handleNavigation = (direction) => {
     // Handle direct section navigation (number)
     if (typeof direction === 'number') {

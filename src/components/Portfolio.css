@@ -1,7 +1,7 @@
 .portfolio-section {
   background: #FAF0E6;
   position: relative;
-  overflow: visible !important;
+  overflow: hidden;
 }
 
 .portfolio-section .section-content {
@@ -19,7 +19,7 @@
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* Logo */

@@ -1,7 +1,7 @@
 .contact-section {
   background: #FAF0E6;
   position: relative;
-  overflow: visible !important;
+  overflow: hidden;
 }
 
 .contact-section .section-content {
@@ -19,7 +19,7 @@
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* Logo */
@@ -425,8 +425,8 @@
     padding-top: 100px;
     justify-content: flex-start;
     padding-bottom: 100px;
-    overflow-y: auto;
-    height: auto;
+    overflow: hidden;
+    height: 100vh;
     min-height: 100vh;
   }
   
@@ -464,8 +464,8 @@
     gap: 40px;
     padding-top: 100px;
     padding-bottom: 100px;
-    overflow-y: auto;
-    height: auto;
+    overflow: hidden;
+    height: 100vh;
     min-height: 100vh;
   }
   
